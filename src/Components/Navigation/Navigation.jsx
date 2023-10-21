@@ -49,7 +49,7 @@ const Navigation = () => {
                 <div className='flex items-center space-x-3'>
                     <Avatar
                         alt="username"
-                        src=''
+                        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16FA9/production/_92712149_gettyimages-480164327.jpg"//buraya fotoğraf eklemenin yolunu bulmam gerek
                     />
                     <div>
                         <span>Recep Efe Aksoy</span>

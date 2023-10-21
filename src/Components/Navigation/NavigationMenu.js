@@ -41,7 +41,7 @@ export const navigationMenu=[
         path:'/communities'
     },
     {
-        title:'Verified',
+        title:'Aşı ol',
         icon:<VerifiedIcon/>,
         path:'/verified'
     },
