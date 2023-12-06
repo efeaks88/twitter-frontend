@@ -12,6 +12,28 @@ const RightPart = () => {
     const handleChangeTheme = () => {
         console.log("handle change theme");
     }
+    const catNews = [
+        {
+          title: "Kediler için güncel",
+          hashtag: "#Yaş mama fiyatı",
+          postCount: "10.5B posts",
+        },
+        {
+          title: "Kediler için güncel",
+          hashtag: "#Nereyi ısırmalıyız",
+          postCount: "9.5B posts",
+        },
+        {
+          title: "Kediler için güncel",
+          hashtag: "#Bakın evi nasıl dağıttım",
+          postCount: "9B posts",
+        },
+        {
+          title: "Kediler için güncel",
+          hashtag: "#Mart ayine ne kadar kaldi",
+          postCount: "10.5B posts",
+        },
+      ];
     return (
         <div className='py-5 sticky top'>
             <div className='relative flex items-center'>
@@ -40,14 +62,16 @@ const RightPart = () => {
                         Trending news for cats;
                     </p>
                 </div>
-                {[1, 1, 1, 1, 1].map((item) => <div className='flex justify-between w-full'>
+                {catNews.map((item, index) => (
+                  <div key={index} className='flex justify-between w-full'>
                     <div>
-                        <p className='text-sm'>Kediler için güncel</p>
-                        <p className='font-bold'>#Yaş mama fiyatı</p>
-                        <p className='text-gray-500'>10.5B posts</p>
+                        <p className='text-sm'>{item.title}</p>
+                        <p className='font-bold'>{item.hashtag}</p>
+                        <p className='text-gray-500'>{item.postCount}</p>
                     </div>
                     <MoreHorizIcon />
-                </div>)}
+                  </div>
+                ))}
             </section>
             <section>
                 <SubscriptionModal open={openSubscriptionModel} handleClose={handleCloseSubscriptionModel}/>
